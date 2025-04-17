@@ -29,6 +29,11 @@
         const subtitle = "This is a website for learning react";
         const address = "https://www.netninja.dev";
 
+        // const handleClick = () => {
+        //   console.log("you clicked me");
+        //   console.log("the site title is:", tittle);
+        // };
+
         return (
           <div>
             <h2>{tittle.toUpperCase()}</h2>
@@ -36,6 +41,14 @@
             <p>Today's date is: {new Date().toDateString()}</p>
             <p>Random number: {Math.random() * 100}</p>
             <a href={address}>Visit the Ninja site</a>
+            <button
+              onClick={() => {
+                console.log("you clicked me");
+                console.log("the site title is:", tittle);
+              }}
+            >
+              Click me
+            </button>
           </div>
         );
       };
