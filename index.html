@@ -23,6 +23,17 @@
       <p>footer</p>
     </footer>
 
-    <script type="text/babel"></script>
+    <script type="text/babel">
+      const Banner = () => {
+        return (
+          <div>
+            <p>banner</p>
+          </div>
+        );
+      };
+
+      //render the component to the DOM
+      ReactDOM.render(<Banner />, document.getElementById("banner"));
+    </script>
   </body>
 </html>
