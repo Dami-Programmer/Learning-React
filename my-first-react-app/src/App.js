@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  let name = "mario";
+  const [name, setName] = useState("mairo");
 
   const handleClick = () => {
-    name = "luigi";
+    setName("Dami");
     console.log(name);
   };
   return (
