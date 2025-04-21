@@ -4,7 +4,7 @@ import Title from "./components/title";
 import Modal from "./components/Modal";
 
 function App() {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [showEvents, setShowEvents] = useState(true);
   const [events, setEvents] = useState([
     { title: "mario's birthday bash", id: 1 },
@@ -54,12 +54,6 @@ function App() {
           </React.Fragment>
         ))}
 
-      {/* <Modal>
-        <h2>10% off Coupon Code!!</h2>
-        <p>Use the code NINJA10 at the checkout.</p>
-         <a href="#">find out more...</a>
-      </Modal> */}
-
       {showModal && (
         <Modal handleClose={handleClose}>
           <h2>Terms and Conditions</h2>
@@ -70,6 +64,9 @@ function App() {
           </p>
         </Modal>
       )}
+      <div>
+        <button onClick={() => setShowModal(true)}>Show Modal</button>
+      </div>
     </div>
   );
 }
