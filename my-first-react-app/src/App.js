@@ -3,6 +3,7 @@ import { useState } from "react";
 import Title from "./components/title";
 import Modal from "./components/Modal";
 import EventList from "./components/EventList";
+import NewEventForm from "./components/NewEventForm";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -49,16 +50,11 @@ function App() {
 
       {showModal && (
         <Modal handleClose={handleClose} isSalesModal={true}>
-          <h2>Terms and Conditions</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown
-          </p>
+          <NewEventForm />
         </Modal>
       )}
       <div>
-        <button onClick={() => setShowModal(true)}>Show Modal</button>
+        <button onClick={() => setShowModal(true)}>Add New Event</button>
       </div>
     </div>
   );
