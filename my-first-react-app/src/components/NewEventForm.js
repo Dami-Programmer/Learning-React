@@ -1,22 +1,24 @@
 import "./NewEventForm.css";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export default function NewEventForm({ addEvent }) {
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState("");
+  // const [title, setTitle] = useState("");
+  // const [date, setDate] = useState("");
+  const title = useRef();
+  const date = useRef();
 
   const resetForm = () => {
-    setTitle("");
-    setDate("");
+    title.current.value = "";
+    date.current.value = "";
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const event = {
-      title,
-      date,
+      title: title.current.value,
+      date: date.current.value,
       id: Math.floor(Math.random() * 10000),
     };
 
@@ -29,19 +31,11 @@ export default function NewEventForm({ addEvent }) {
       <form className="new-events-form" onSubmit={handleSubmit}>
         <label>
           <span>Event Title:</span>
-          <input
-            type="text"
-            onChange={(e) => setTitle(e.target.value)}
-            value={title}
-          />
+          <input type="text" ref={title} />
         </label>
         <label>
           <span>Event Date:</span>
-          <input
-            type="date"
-            onChange={(e) => setDate(e.target.value)}
-            value={date}
-          />
+          <input type="date" ref={date} />
         </label>
         <button>Submit</button>
       </form>
