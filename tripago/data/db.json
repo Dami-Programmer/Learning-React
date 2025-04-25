@@ -1,0 +1,20 @@
+{
+  "trips": [
+    {
+      "title": "2 Night Stay in Venice",
+      "price": "$195"
+    },
+    {
+      "title": "3 Night Stay in Venice",
+      "price": "$295"
+    },
+    {
+      "title": "4 Night Stay in Venice",
+      "price": "$345"
+    },
+    {
+      "title": "3 Night Stay in Venice",
+      "price": "$325"
+    }
+  ]
+}
